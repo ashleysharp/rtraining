@@ -29,10 +29,9 @@ x <- 49
 x2 <- sqrt(x)
 
 # Import linelist https://epirhandbook.com/en/import-and-export.html
-# File can be found here https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx
+## File can be found here https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx
 
-
-linelinst <- import("data/linelist_cleaned.xlsx")
+linelist <- import("data/linelist_cleaned.xlsx")
 
 
 
