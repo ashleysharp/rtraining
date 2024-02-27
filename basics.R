@@ -4,7 +4,7 @@
 
 # See Epi R Handbook chapter 3 Basics https://epirhandbook.com/en/r-basics.html
 
-# Installing R and RStudio https://epirhandbook.com/en/r-basics.html#installation
+# Installing R and RStudio https://posit.co/download/rstudio-desktop/
 
 # The RStudio environment https://epirhandbook.com/en/r-basics.html#rstudio
 
