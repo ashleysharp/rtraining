@@ -1,17 +1,18 @@
 
-# Intro ----
+# Basics ----
 
-# The course book https://epirhandbook.com/en/download-handbook-and-data.html
 
-# Installing R and RStudio
+# See Epi R Handbook chapter 3 Basics https://epirhandbook.com/en/r-basics.html
 
-# The RStudio environment - source pane, console pane, environment pane, plots/viewer/packages/help
+# Installing R and RStudio https://epirhandbook.com/en/r-basics.html#installation
 
-# Scripts, commenting
+# The RStudio environment https://epirhandbook.com/en/r-basics.html#rstudio
 
-# Functions and arguments
+# Functions and arguments https://epirhandbook.com/en/r-basics.html#functions
 
-# Packages, install and load
+sqrt(49)
+
+# Packages, install and load https://epirhandbook.com/en/r-basics.html#packages
 
 # install.packages("tidyverse")
 # install.packages("rio")
@@ -19,12 +20,19 @@
 library(tidyverse)
 library(rio)
 
-# Objects
+# Scripts, commenting https://epirhandbook.com/en/r-basics.html#scripts
 
-# Import linelist 
+# Objects https://epirhandbook.com/en/r-basics.html#objects
+
+x <- 49
+
+x2 <- sqrt(x)
+
+# Import linelist https://epirhandbook.com/en/import-and-export.html
 # File can be found here https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx
 
-linelist <- import("data/linelist_cleaned.xlsx")
+
+linelinst <- import("data/linelist_cleaned.xlsx")
 
 
 
