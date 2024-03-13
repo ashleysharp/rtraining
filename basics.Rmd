@@ -1,15 +1,18 @@
 ---
 title: "R Basics"
 output:
+  word_document:
+    toc: yes
   html_document:
-    toc: true
-    toc_float: true
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
 date: "2024-03-13"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 ```
 
 # Course text
@@ -108,9 +111,9 @@ You can create projects from git repositories (see below)
 
 Note slash direction
 
-- Windows - "C:\Users\ashley.sharp\Desktop\R projects\rtraining\data"
+- Windows - `C:\Users\ashley.sharp\Desktop\R projects\rtraining\data`
 
-- R - "C:/Users/ashley.sharp/Desktop/R projects/rtraining/data"
+- R - `C:/Users/ashley.sharp/Desktop/R projects/rtraining/data`
 
 - Absolute paths - avoid
 
