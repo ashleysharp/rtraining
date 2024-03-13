@@ -93,17 +93,3 @@ skim(linelist)
     # the completeness of the gender field
     # the mean age of the cohort
     # the earliest onset date
-
-
-
-
-
-
-# Basics 3 ----
-# To update R
-# install.packages("installr")
-# library(installr)
-# updateR() 
-
-# Export csv
-
