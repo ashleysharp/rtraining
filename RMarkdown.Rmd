@@ -1,0 +1,120 @@
+---
+title: "RMarkdown"
+output: html_document
+date: "2024-09-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Reports and R markdown
+
+A useful summary can be found in the Epi R handbook
+<https://epirhandbook.com/en/reports-with-r-markdown.html>
+
+<https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>
+
+## Key points
+
+File ending in .Rmd
+
+
+The working directory
+
+The working directory of a markdown file is wherever the Rmd file itself
+is saved. For instance, if the R project is within \~/Documents/projectX
+and the Rmd file itself is in a subfolder
+\~/Documents/projectX/markdownfiles/markdown.Rmd, the code
+read.csv(“data.csv”) within the markdown will look for a csv file in the
+markdownfiles folder, and not the root project folder where scripts
+within projects would normally automatically look.
+
+There are three basic components to an Rmd file: YAML, Markdown text,
+and R code chunks.
+
+### YAML metadata
+
+Referred to as the ‘YAML metadata’ or just ‘YAML’, this is at the top of
+the R Markdown document. This section of the script will tell your Rmd
+file what type of output to produce, formatting preferences, and other
+metadata such as document title, author, and date.
+
+### Markdown text
+
+Titles and headings A hash symbol in a text portion of a R Markdown
+script creates a heading. This is different than in a chunk of R code in
+the script, in which a hash symbol is a mechanism to
+comment/annotate/de-activate, as in a normal R script.
+
+# First-level heading / title
+
+## Second level heading
+
+### Third-level heading
+
+Bullets and numbering Use asterisks (\*) to created a bullets list.
+Finish the previous sentence, enter two spaces, Enter/Return twice, and
+then start your bullets. Include a space between the asterisk and your
+bullet text. After each bullet enter two spaces and then Enter/Return.
+Sub-bullets work the same way but are indented. Numbers work the same
+way but instead of an asterisk, write 1), 2), etc. Below is how your R
+Markdown script text might look.
+
+Here are my bullets (there are two spaces after this colon):
+
+-   Bullet 1 (followed by two spaces and Enter/Return)\
+-   Bullet 2 (followed by two spaces and Enter/Return)
+    -   Sub-bullet 1 (followed by two spaces and Enter/Return)\
+    -   Sub-bullet 2 (followed by two spaces and Enter/Return)
+
+*Italic*
+
+**Bold**
+
+
+Comment out text
+<!-- You can “comment out” R Markdown text just as you can use the “#” to comment out a line of R code in an R chunk. Simply highlight the text and press Ctrl+Shift+c (Cmd+Shift+c for Mac). The text will be surrounded by arrows and turn green. It will not appear in your output. -->
+
+
+
+### Code chunks
+
+```{r}
+# This is a code chunk
+```
+
+Outputs
+```{r}
+print("this is an output")
+```
+
+Sections of the script that are dedicated to running R code are called
+“chunks”. This is where you may load packages, import data, and perform
+the actual data management and visualisation.
+
+Each chunk is opened with a line that starts with three back-ticks, and
+curly brackets that contain parameters for the chunk ({ }). The chunk
+ends with three more back-ticks.
+
+You can create a new chunk by typing it out yourself, by using the
+keyboard shortcut “Ctrl + Alt + i” (or Cmd + Shift + r in Mac), or by
+clicking the green ‘insert a new code chunk’ icon at the top of your
+script editor.
+
+### Templates
+
+Useful templates are available in the ukhsacharts package
+<https://gitlab.phe.gov.uk/fs-data-science-leads/ukhsacharts>
+
+-   HTML UKHSA template
+-   HTML UKHSA slidy template
+-   PowerPoint UKHSA template
+-   Word UKHSA template
+
+Once the package is installed you should be able to access these
+templates (you may need to restart R Studio). To do this, click:
+
+File New File R Markdown... From Template These templates should be
+listed with ukhsacharts in curly brackets on the right hand side.

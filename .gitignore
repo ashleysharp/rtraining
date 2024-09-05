@@ -56,6 +56,12 @@ rsconnect/
 *.doc
 *.docx
 
+# Templates
+HTML template
+PowerPoint template
+Word template
+
+
 # Next session
 next_session.Rmd
 

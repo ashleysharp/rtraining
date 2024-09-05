@@ -17,23 +17,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Course text
 
-The course book is https://epirhandbook.com/
+The course book is <https://epirhandbook.com/>
 
 # Installing R and Rstudio
-Installing R and RStudio https://posit.co/download/rstudio-desktop/
 
-The RStudio environment https://epirhandbook.com/en/r-basics.html#rstudio
+Installing R and RStudio <https://posit.co/download/rstudio-desktop/>
 
+The RStudio environment <https://epirhandbook.com/en/r-basics.html#rstudio>
 
 # Functions and arguments
-Functions and arguments https://epirhandbook.com/en/r-basics.html#functions
 
+Functions and arguments <https://epirhandbook.com/en/r-basics.html#functions>
 
 # Packages
+
 Install and loadhttps://epirhandbook.com/en/r-basics.html#packages
 
-Install using the function `install.packages()`
-Remember to the put the package name in quotation marks e.g.
+Install using the function `install.packages()` Remember to the put the package name in quotation marks e.g.
 
 `install.packages("tidyverse")`
 
@@ -47,19 +47,19 @@ Load packages using `library()`
 
 No quotation marks required
 
-
 ```{r include=FALSE}
 library(tidyverse)
 library(rio)
 ```
 
-
 # Scripts
-https://epirhandbook.com/en/r-basics.html#scripts
+
+<https://epirhandbook.com/en/r-basics.html#scripts>
 
 File ending in `.R`
 
-You can comment out text in scripts using #
+You can comment out text in scripts using \#
+
 ```{r}
 # Comment
 ```
@@ -69,7 +69,8 @@ You can use the keyboard shortcut `Ctrl + shift + c` to comment
 A more useful script is R markdown `.Rmd` (see below)
 
 # Objects
-https://epirhandbook.com/en/r-basics.html#objects
+
+<https://epirhandbook.com/en/r-basics.html#objects>
 
 Use the 'assignment operator' `<-` to create an object
 
@@ -79,12 +80,11 @@ x <- 49
 x2 <- sqrt(x)
 ```
 
-
 # Importing data
-https://epirhandbook.com/en/import-and-export.html
 
-A dummy linelist can be found here https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx
-You can download this and save on your machine in a data folder
+<https://epirhandbook.com/en/import-and-export.html>
+
+A dummy linelist can be found here <https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx> You can download this and save on your machine in a data folder
 
 ```{r}
 # linelist <- import("data/linelist_cleaned.xlsx")
@@ -96,14 +96,15 @@ You can also import directly from the web
 linelist <- import("https://github.com/appliedepi/epirhandbook_eng/raw/master/data/case_linelists/linelist_cleaned.xlsx")
 ```
 
-
 # Working directory
-https://epirhandbook.com/en/r-basics.html#working-directory
+
+<https://epirhandbook.com/en/r-basics.html#working-directory>
 
 getwd()
 
 # R projects
-https://epirhandbook.com/en/r-projects.html#r-projects
+
+<https://epirhandbook.com/en/r-projects.html#r-projects>
 
 You can create projects from git repositories (see below)
 
@@ -111,18 +112,17 @@ You can create projects from git repositories (see below)
 
 Note slash direction
 
-- Windows - `C:\Users\ashley.sharp\Desktop\R projects\rtraining\data`
+-   Windows - `C:\Users\ashley.sharp\Desktop\R projects\rtraining\data`
 
-- R - `C:/Users/ashley.sharp/Desktop/R projects/rtraining/data`
+-   R - `C:/Users/ashley.sharp/Desktop/R projects/rtraining/data`
 
-- Absolute paths - avoid
+-   Absolute paths - avoid
 
 `linelist <- import("C:/Users/ashley.sharp/Desktop/R projects/rtraining/data/linelist_cleaned.xlsx")`
 
-- Relative paths - better
+-   Relative paths - better
 
 `linelist <- import("data/linelist_cleaned.xlsx")`
-
 
 # Object classes
 
@@ -149,10 +149,10 @@ class(now)
 ```
 
 Data frame
+
 ```{r}
 class(linelist)
 ```
-
 
 # Reviewing data
 
@@ -162,16 +162,13 @@ library(skimr)
 skim(linelist)
 ```
 
-
-
-
 # R markdown
+
 <https://epirhandbook.com/en/reports-with-r-markdown.html>
 
 File ending in .Rmd
 
-A more flexible kind of script that you can use to make automated documents
- <https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>
+A more flexible kind of script that you can use to make automated documents <https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>
 
 Rmd files have several features:
 
@@ -184,6 +181,7 @@ Rmd files have several features:
 **Bold**
 
 <!-- comment out this text -->
+
 <!-- Comment out text with Ctrl + Shift + c -->
 
 Code chunks
@@ -198,21 +196,14 @@ Outputs
 print("this is an output")
 ```
 
-
 # Git and github
-https://epirhandbook.com/en/version-control-and-collaboration-with-git-and-github.html
 
+<https://epirhandbook.com/en/version-control-and-collaboration-with-git-and-github.html>
 
-Install git https://git-scm.com/downloads
+Install git <https://git-scm.com/downloads>
 
-Git repository for course materials url: https://github.com/ashleysharp/rtraining
+Git repository for course materials url: <https://github.com/ashleysharp/rtraining>
 
+Create a project from git repository: File -\> new project -\> create project from version control -\> enter url and choose location on your machine
 
-Create a project from git repository:
-File -> new project -> create project from version control -> enter url and choose location on your machine
-
-Get latest code from git repository
-Git -> Pull
-
-
-
+Get latest code from git repository Git -\> Pull
