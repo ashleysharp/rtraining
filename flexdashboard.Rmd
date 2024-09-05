@@ -1,0 +1,68 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ukhsacharts)
+library(ggplot2)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+df_pubtable <- data.frame(Exposure = c('Apple', 'Tomato', 'Banana', 'Pear'),
+                          Casetotals = c(100, 75, 100, 100),
+                          Case_n = c(30, 50, 55, 75),
+                          case_p = c(30, 66.67, 55, 75),
+                          or = c(0.5, 1.23, 1.01, 2.46),
+                          lci = c(0.35, 1.03, 0.99, 2.15),
+                          uci = c(0.98, 1.59, 1.50, 2.66),
+                          pval = c(0.045, 0.025, 0.678, 0.002))
+myprettytable <- ukhsa_table(df_pubtable,
+                          add_groups = T,
+                          group_names = c('Exposure', 'Cases exposed', 'Odds ratio', 'Confidence (95%)', 'P value'),
+                          col_span = c(1, 3, 1, 2, 1),
+                          col_names = c('Exposure', 'Total', 'N', '%', 'Odds ratio', 'Lower', 'Upper', 'P value'),
+                          )
+myprettytable
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+df <- data.frame(year = rep(2015:2021, each = 2),
+                 group = rep(LETTERS[1:2], times = 7),
+                 value = runif(14))
+
+p <- ggplot(df, aes(x = year, y = value)) +
+        geom_col(aes(fill = group),
+                 position = "dodge") +
+        labs(title = "This is an example",
+             subtitle = "Here's a subtitle",
+             y = "Value between 0 and 1",
+             x = "Year of measurement")
+p + theme_ukhsa("ukhsa") +
+        scale_fill_manual(name = "Measurement\ngroup",
+                       values = ukhsa_colours(theme="ukhsa_blues"))
+  
+```
+
+### Chart C
+
+
+```{r}
+plot(pressure)
+```
+
+
